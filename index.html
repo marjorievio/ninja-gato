@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es-CL">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ninja-Gato</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.css" rel="stylesheet">
+    
+    <!-- JQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.js"></script>
+        
+    <script>
+        $(document).ready(function(){
+
+            $('img').on('click',function() {
+                //Obtengo el valor que tiene el atributo data-alt-src
+                var ruta_actual = $(this).attr('src');
+                var ruta_alternativa = $(this).attr('data-alt-src');                
+
+                //Cambio el valor del atributo src por el valor que tiene el data-alt-src y viceversa
+                $(this).attr('src',ruta_alternativa);
+                $(this).attr('data-alt-src',ruta_actual);
+            });
+
+        });
+    </script>
+</head>
+<body>
+    <div class="container text-center">
+        <div class="container p-5 bg-dark text-center text-white rounded-bottom">
+            <h1 class="display-1 text-center">Ninja-Cat</h1>
+        </div>
+        <div class="row mt-4 mb-4">
+            <div class="col-12 mb-1">
+                <img src="img/ninja0.png" data-alt-src="img/cat0.png" alt="Imagen">
+            </div>
+            <div class="col-12 mb-1">
+                <img src="img/ninja1.png" data-alt-src="img/cat1.png" alt="Imagen">
+            </div>
+            <div class="col-12 mb-1">
+                <img src="img/ninja2.png" data-alt-src="img/cat2.png" alt="Imagen">
+            </div>
+            <div class="col-12 mb-1">
+                <img src="img/ninja3.png" data-alt-src="img/cat3.png" alt="Imagen">
+            </div>
+            <div class="col-12 mb-1">
+                <img src="img/ninja4.png" data-alt-src="img/cat4.png"  alt="Imagen">
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.js"  crossorigin="anonymous"></script>
+</body>
+</html>
